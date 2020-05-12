@@ -5,12 +5,8 @@ include('./mydb.php');
 $Error = "";
 ?>
 
-
-
-
-Testing commits
-
-
+<html>
+<body>
 
 
 
@@ -29,6 +25,8 @@ Testing commits
   		</div>
   	</div>
   </header>
+
+
 
 
        <link rel="stylesheet" href="Style.css">
