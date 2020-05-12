@@ -5,8 +5,12 @@ include('./mydb.php');
 $Error = "";
 ?>
 
-<html>
-<body>
+
+
+
+New textarea
+
+
 
 
 
@@ -25,10 +29,6 @@ $Error = "";
   		</div>
   	</div>
   </header>
-
-Sample
-
-testing
 
 
        <link rel="stylesheet" href="Style.css">
