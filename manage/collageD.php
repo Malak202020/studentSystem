@@ -51,18 +51,23 @@
 
           <Table border="7">
             <Tr>
-              <Th>User_ID</Th>
-              <Th >User_Name</Th>
-
+              <Th>college ID</Th>
+              <Th>college Name</Th>
+              <Th>
+                Department Name
+              </Th>
             </Tr>
             <?php
-              $b=$MyDB->query("SELECT F_ID,F_Name FROM faculty");
+              $b=$MyDB->query("SELECT faculty.F_ID,faculty.F_Name,department.Dep_Name FROM faculty,department WHERE faculty.F_ID = department.F_ID");
               while($ex = $b->fetch_assoc()){
 
             ?>
             <Tr>
               <Td>  <?php echo $ex['F_ID']?></Td>
               <Td><?php echo $ex['F_Name']?></Td>
+              <Td>
+                <?php echo $ex['Dep_Name'] ?>
+              </Td>
 
               <Td><a HREF="delUser.php?ID= <?php echo $ex['F_ID']?>
                 <?php echo $ex['F_Name']?>" ></a></Td>

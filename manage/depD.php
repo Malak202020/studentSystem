@@ -51,10 +51,6 @@ $Error = "";
 
        	<div class="form-style-5">
 
-       		<Table border="10">
-
-            <tr><Th><a  > Collages</br></li></a></Th></tr>
-
 
                  <a href="#navigation"><div id="center">^</div></a>
                  <div id="content" STYLE="TEXT-ALIGN:CENTER;">
@@ -63,12 +59,21 @@ $Error = "";
 
                       <Table border="7">
                         <Tr>
-                          <Th>Department_ID</Th>
-                          <Th >Department_Name</Th>
-
+                          <Th>Department Name</Th>
                         </Tr>
-
+                        <tr>
+                          <td>
+                            <?php
+                              $result = $MyDB->query("SELECT * FROM department");
+                              while($row = $result->fetch_assoc()){
+                                $name = $row['Dep_Name'];
+                                echo $name."<br />";
+                                }
+                            ?>
+                          </td>
+                        </tr>
                         <?php
+                        /*
                         include('MyDB.php');
                         	error_reporting(E_ERROR | E_PARSE);
                         	$result = $MyDB->query("SELECT Dep_ID,Dep_Name,F_ID FROM department where F_ID='$faculty' ");
@@ -76,8 +81,8 @@ $Error = "";
                         		$ID = $row['Dep_ID'];
                         		$name = $row['Dep_Name'];
                             $FID = $row['F_ID'];
-
                             }
+                            */
                         ?>
 
                     </Table>
