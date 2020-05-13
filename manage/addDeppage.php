@@ -26,18 +26,25 @@ include('./MyDB.php');
 			<fieldset>
 				<legend><span class="number"></span> Add Department</legend><br>
 				<label for='name'>Department Name: </label>
-				<input name="Name" Type="TEXT" required><br>
+				<input name="departmentName" Type="TEXT" required><br>
 
 				<input name="submit" Type="submit" value="Add" />
 			</fieldset>
 			<?php
 
-			if (isset($_GET['succes'])) {
-				echo "<h3>" . $_GET['succes'] . "<h3>";
+			if (isset($_GET['success'])) {
+				echo "<h3>You successfully added".$_GET['success']. "department<h3>";
 			}
 			?>
 		</form>
+		<?php
+		$departments = $MyDB->query("SELECT *FROM department");
+		while($department = $departments->fetch_assoc()){
+			$departmentName = $department["Dep_Name"];
 
+			echo $departmentName."<br>" ;
+		}
+?>
 	</div>
 
 </body>

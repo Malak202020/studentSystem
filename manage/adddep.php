@@ -2,10 +2,10 @@
 
 include('./MyDB.php');
 
-$Name = @$_POST['Name'];
+$departmentName = @$_POST['departmentName'];
 
 
-$MyDB->query("INSERT INTO department (Dep_ID,Dep_Name,F_ID) VALUES (NULL,'$Name','1')");
-header("Location: AddDepPage.php?succes=succed");
+$MyDB->query("INSERT INTO department  VALUES (NULL,'$departmentName','1')");
+header("Location: AddDepPage.php?success=".$departmentName);
 
 ?>
