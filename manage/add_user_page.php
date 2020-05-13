@@ -37,22 +37,19 @@ include('./mydb.php');
 
 
 <label for='User_Role' >User Role: </label>
-<select id="User_Role">
+<select id="User_Role" name="User_Role">
 	<option value="None">--Select User Role----</option>
-	<option value="ID01">Admin</option>
-			<option value="ID03">Teacher</option>
-			<option value="ID02">Student</option>
-
-
-
+	<option value="admin">Admin</option>
+	<option value="teacher">Teacher</option>
+	<option value="student">Student</option>
 
 
 <input name="submit" Type="submit" value="Add"/>
 </fieldset>
 <?php
 
-	if(isset($_GET['succes'])){
-		echo "<h3>".$_GET['succes']."<h3>";
+	if(isset($_GET['success'])){
+		echo "<h3>You added a new user with the name ".$_GET['success']." successfully in the role ".$_GET['role']."<h3>";
 	}
 ?>
 </form>

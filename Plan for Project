@@ -1,0 +1,18 @@
+Work that needs to be done:
+
+1) Redesign the entire website
+2) Make sure database is used properly (remove extra tables/add necessary tables)
+3)
+
+
+14/5/2020 Thursday :
+1) Fix add user [done] (FIRST VIDEO)
+2) Fix faculties [done]
+3) Fix departments, make sure to select a faculty before
+adding department [done] (SECOND VIDEO)
+4) Create show user page (Third Video) [Not fully done, fixed bug for showing all users]
+
+
+4.5) FIX DESIGNNNN! (Fourth Video)
+--------------------------------------------------------------
+5) Create subject and assign to teachers per stage instead of selecting subjects and selecting teachers

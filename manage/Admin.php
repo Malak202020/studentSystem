@@ -66,7 +66,7 @@ $Error = "";
       </tr>
 
       <tr>
-        <Th><a id="A" href="user_page.php"> show User</br></li></a></Th>
+        <Th><a id="A" href="showUser_Page.php"> show User</br></li></a></Th>
       </tr>
       <tr>
         <Th><a id="A" href="tchersub.php"> Teacher Subject</br></li></a></Th>
