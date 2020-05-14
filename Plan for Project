@@ -5,7 +5,7 @@ Work that needs to be done:
 3)
 
 
-14/5/2020 Thursday :
+13/5/2020 - 14/5/2020 Wednesday/Thursday :
 1) Fix add user [done] (FIRST VIDEO)
 2) Fix faculties [done]
 3) Fix departments, make sure to select a faculty before
@@ -13,6 +13,15 @@ adding department [done] (SECOND VIDEO)
 4) Create show user page (Third Video) [Not fully done, fixed bug for showing all users]
 
 
-4.5) FIX DESIGNNNN! (Fourth Video)
+4.5) FIX DESIGNNNN! (Fourth Video) [finished index page only]
 --------------------------------------------------------------
-5) Create subject and assign to teachers per stage instead of selecting subjects and selecting teachers
+5) Create subject and assign to teachers per stage instead of selecting subjects and selecting teachers [to be continued next day]
+
+
+
+14/5/2020 - 15/5/2020 Thursday/Friday:
+1) Create stages, add stages to departments (Whether a department is 3 years, 4 years or 6 years)
+2) Add subjects per stage or subjects per department (Discuss with Malak)
+3) Connect subjects to teachers or stages to teachers (Discuss with Malak)
+4) Login and note down all the bugs for all 3 kinds of users (Admin/teacher/student)
+5) Redesign part 2, creating a properly working form
