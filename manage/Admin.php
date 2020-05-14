@@ -69,7 +69,7 @@ $Error = "";
         <Th><a id="A" href="showUser_Page.php"> show User</br></li></a></Th>
       </tr>
       <tr>
-        <Th><a id="A" href="tchersub.php"> Teacher Subject</br></li></a></Th>
+        <Th><a id="A" href="teacherSubject_page.php">Add Subject</br></li></a></Th>
       </tr>
     </Table>
 

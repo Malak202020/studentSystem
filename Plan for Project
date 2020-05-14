@@ -19,9 +19,27 @@ adding department [done] (SECOND VIDEO)
 
 
 
+
 14/5/2020 - 15/5/2020 Thursday/Friday:
-1) Create stages, add stages to departments (Whether a department is 3 years, 4 years or 6 years)
-2) Add subjects per stage or subjects per department (Discuss with Malak)
-3) Connect subjects to teachers or stages to teachers (Discuss with Malak)
+1) Add stages to users [done]
+2) Add subjects per stage or subjects per department [Done]
+3) Connect subjects to teachers or stages to teachers [Done]
 4) Login and note down all the bugs for all 3 kinds of users (Admin/teacher/student)
+4a) Admin currently being fixed
+4b) Teacher Fleem Hindi (Only has submit assignment, 7esab ka 0)
+4c) Student has N O T H I N G (Literally empty page)
+
+
 5) Redesign part 2, creating a properly working form
+
+
+Features needed for Teacher:
+
+1) Show who is logged in 
+2) Show Departments/Subjects/stages (Table format)
+3) Be able to open Subjects and check all students / give assignments (SELECT * FROM user WHERE Stage = 2 && Dep = Computer) //No subject/course selection
+
+Features needed for Student:
+
+1) Show student info
+2) Show assigned assignments from teacher/subject
