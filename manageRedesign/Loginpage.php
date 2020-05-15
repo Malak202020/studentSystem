@@ -26,6 +26,7 @@
                   <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="User Name " placeholder="your username">
                   <input type="text" class="form-control form-control-user" id="exampleInputEmail"name ="password" placeholder="your password">
                 </div>
+                <form class="user" method="POST" ACTION="" enctype="multipart/form-data">
                 <!--<div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
@@ -34,9 +35,9 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div> -->
-                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                  Login
-                </a>
+                <input name="submit" Type="submit" value="Add" class="btn btn-primary btn-user btn-block" />
+								<hr>
+								
                 <hr><!--
                 <a href="index.html" class="btn btn-google btn-user btn-block">
                   <i class="fab fa-google fa-fw"></i> Register with Google
