@@ -17,7 +17,7 @@
 							<div class="text-center">
 								<h1 class="h4 text-gray-900 mb-4">Add Faculty!</h1>
 							</div>
-							<form class="user">
+							<form class="user" method="POST" ACTION="./AddCollege.php" enctype="multipart/form-data" >
 								<!-- <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" >
@@ -27,7 +27,7 @@
                   </div>
                 </div> -->
 								<div class="form-group">
-									<input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Faculty Name" name="facultyName">
+									<input type="text" name="facultyName" class="form-control form-control-user"  placeholder="Faculty Name" required>
 								</div>
 								<!-- <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
@@ -37,9 +37,7 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div> -->
-								<a href="login.html" class="btn btn-primary btn-user btn-block">
-									Add faculty!
-								</a>
+						<input name="submit" Type="submit" value="Add" class="btn btn-primary btn-user btn-block" />
 								<hr>
 								<?php
 

@@ -3,15 +3,7 @@
 
 				
 				
-				
-			
-			<?php
 
-			if (isset($_GET['success'])) {
-				echo "<h3>You added a new user with the name " . $_GET['success'] . " successfully in the role " . $_GET['role'] . "<h3>";
-			}
-			?>
-		
 		<div class="container-fluid">
 
 
@@ -29,7 +21,7 @@
 							<div class="text-center">
 								<h1 class="h4 text-gray-900 mb-4">Add user</h1>
 							</div>
-							<form class="user method="POST" ACTION="./Add_user.php" enctype="multipart/form-data">
+							<form class="user" method="POST" ACTION="./Add_user.php" enctype="multipart/form-data">
 								<!-- <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" >
@@ -39,9 +31,9 @@
                   </div>
                 </div> -->
 								<div class="form-group">
-									<input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="User Name" name="User_Name ">
-									<input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Last Name" name="User_LastName">
-									<input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="User Password" name="User_Password">
+									<input type="text" class="form-control form-control-user" placeholder="User Name" name="User_Name ">
+									<input type="text" class="form-control form-control-user" placeholder="Last Name" name="User_LastName">
+									<input type="text" class="form-control form-control-user" placeholder="User Password" name="User_Password">
 								</div>
 								<label for='User_Role'>User Role: </label>
 				<select id="User_Role" name="User_Role">
@@ -68,9 +60,8 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div> -->
-								<a href="login.html" class="btn btn-primary btn-user btn-block">
-									Add User!
-								</a>
+				<input name="submit" Type="submit" value="Add" class="btn btn-primary btn-user btn-block" />
+
 								<hr>
 								<?php
 

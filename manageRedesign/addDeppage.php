@@ -41,7 +41,7 @@
                   </div>
                 </div> -->
 								<div class="form-group">
-									<input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Department Name" name="departmentName">
+									<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Department Name" name="departmentName">
 								</div>
 
 								<!-- <div class="form-group row">
@@ -52,9 +52,7 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div> -->
-								<a href="login.html" class="btn btn-primary btn-user btn-block">
-									Add Department!
-								</a>
+				<input name="submit" Type="submit" value="Add" class="btn btn-primary btn-user btn-block" />
 								<hr>
 								<?php
 
