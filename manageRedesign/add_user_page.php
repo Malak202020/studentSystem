@@ -1,13 +1,6 @@
      <?php include('header.php'); ?>
 
-
-				
-				
-
-		<div class="container-fluid">
-
-
-
+<div class="container-fluid">
 
 	<div class="container">
 
@@ -30,12 +23,12 @@
                     <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
                   </div>
                 </div> -->
-								<div class="form-group">
-									<input type="text" class="form-control form-control-user" placeholder="User Name" name="User_Name ">
-									<input type="text" class="form-control form-control-user" placeholder="Last Name" name="User_LastName">
-									<input type="text" class="form-control form-control-user" placeholder="User Password" name="User_Password">
-								</div>
-								<label for='User_Role'>User Role: </label>
+				<div class="form-group">
+				<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="User Name" name="User_Name"  required>
+				<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="Last Name" name="User_LastName" required>
+				<input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="User Password" name="User_Password" required>
+				</div>
+				<label for='User_Role'>User Role: </label>
 				<select id="User_Role" name="User_Role">
 					<option value="None">--Select User Role----</option>
 					<option value="admin">Admin</option>
@@ -60,17 +53,14 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div> -->
-				<input name="submit" Type="submit" value="Add" class="btn btn-primary btn-user btn-block" />
-
+								<input name="submit" type="submit" value="add" class="btn btn-primary btn-user btn-block">
+									
+								
 								<hr>
 								<?php
 
-								
-		 
-
-
-if (isset($_GET['success'])) {
-	echo "<h3>You added a new user with the name " . $_GET['success'] . " successfully in the role " . $_GET['role'] . "<h3>";
+								 if (isset($_GET['success'])) {
+	                                    echo "<h3>You added a new user with the name " . $_GET['success'] . " successfully in the role " . $_GET['role'] . "<h3>";
 }
 ?>
   
@@ -95,7 +85,6 @@ if (isset($_GET['success'])) {
 				</div>
 			</div>
 		</div>
-
 	</div>
 	
 		<?php include('footer.php'); ?>

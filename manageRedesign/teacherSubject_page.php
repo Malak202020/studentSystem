@@ -1,22 +1,5 @@
 <?php include('header.php'); ?>
-
-   <?php if (isset($_GET['success'])) {
-				echo "<h3>You added a new subject with the name " . $_GET['success']."<h3>";
-      }
-      
-      ?>
-      
-			<?php
-
-if (isset($_GET['success'])) {
-  echo "<h3>You added a new user with the name " . $_GET['success'] . " successfully in the role " . $_GET['role'] . "<h3>";
-}
-?>
-
 <div class="container-fluid">
-
-
-
 
 <div class="container">
 
@@ -30,7 +13,7 @@ if (isset($_GET['success'])) {
         <div class="text-center">
           <h1 class="h4 text-gray-900 mb-4">Add subject</h1>
         </div>
-        <form class="user" method="POST" ACTION="./Add_user.php" enctype="multipart/form-data">
+        <div class="add subject"  method="POST" ACTION="./teacherSubject.php" enctype="multipart/form-data">
           <!-- <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
               <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" >
@@ -39,8 +22,7 @@ if (isset($_GET['success'])) {
               <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
             </div>
           </div> -->
-          <div class="form-group"  method="POST" ACTION="teacherSubject.php" enctype="multipart/form-data">
-     
+           <div class="form-group ">
             <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="subject Name" name="Subject_Name ">
         
           </div>
@@ -85,6 +67,7 @@ if (isset($_GET['success'])) {
     <option value="4">Fourth Stage</option>
   </select>
   </div>
+  
           <!-- <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
               <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
@@ -93,22 +76,14 @@ if (isset($_GET['success'])) {
               <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
             </div>
           </div> -->
-          <input name="submit" Type="submit" value="Add" class="btn btn-primary btn-user btn-block" />
+          <input name="submit" Type="submit" value="add" class="btn btn-primary btn-user btn-block" />
 
           <hr>
-          <?php
-
-          
-
-
-
-if (isset($_GET['success'])) {
-echo "<h3>You added a new user with the name " . $_GET['success'] . " successfully in the role " . $_GET['role'] . "<h3>";
-}
-?>
-
-          
-          
+          <?php 
+                if (isset($_GET['success'])) {
+			       	echo "<h3>You added a new subject with the name " . $_GET['success']."<h3>"; }
+                          
+          ?>
           <!-- <a href="index.html" class="btn btn-google btn-user btn-block">
             <i class="fab fa-google fa-fw"></i> Register with Google
           </a>
@@ -128,6 +103,5 @@ echo "<h3>You added a new user with the name " . $_GET['success'] . " successful
   </div>
 </div>
 </div>
-
-</div>
+                </div>
   <?php include('footer.php'); ?>
