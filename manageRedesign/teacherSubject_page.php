@@ -1,6 +1,5 @@
 <?php include('header.php'); ?>
 
-    </form>
    <?php if (isset($_GET['success'])) {
 				echo "<h3>You added a new subject with the name " . $_GET['success']."<h3>";
       }
@@ -62,7 +61,7 @@ if (isset($_GET['success'])) {
           <label for='User'>Select : </label>
           <select id="User"></br>
             Select Department
-            <br><SELECT name='subject_department'>
+            <SELECT name='subject_department'>
               <?php
 
               $subject = $MyDB->query("SELECT * FROM department ");
