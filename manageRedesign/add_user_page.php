@@ -1,51 +1,56 @@
-<?php
-session_start();
-include('./mydb.php');
+     <?php include('header.php'); ?>
 
 
-?>
-<html>
+				
+				
+				
+			
+			<?php
 
-<head>
-	<link rel="stylesheet" type="text/css" href="Add_product.css">
-	<link rel="stylesheet" href="second-bar.css">
-	<link rel="stylesheet" href="header-second-bar.css">
-</head>
-
-<body bgcolor="#E6E6FA">
-	<header class="header-two-bars">
-		<div class="header-first-bar">
-			<div class="header-limiter">
-				<h1><a href="">StudentSystem <span> Admin </span></a></h1>
-				<h1> <a href="admin.php">
-						<li>Home </span></li>
-					</a></h1>
-
-			</div>
-		</div>
-	</header>
-
-	<div class="form-style-5">
-		<form method="POST" ACTION="./Add_user.php" enctype="multipart/form-data">
-			<fieldset>
-				<legend><span class="number"></span> Add User</legend><br>
-				<label for='User_Name'>User Name: </label>
-				<input name="User_Name" Type="TEXT" required><br>
-
-				<label for='User_LastName'>Last Name: </label>
-				<input name="User_LastName" Type="TEXT" required><br>
-
-				<label for='User_Password'>User Password: </label>
-				<input name="User_Password" Type="TEXT" required><br>
+			if (isset($_GET['success'])) {
+				echo "<h3>You added a new user with the name " . $_GET['success'] . " successfully in the role " . $_GET['role'] . "<h3>";
+			}
+			?>
+		
+		<div class="container-fluid">
 
 
-				<label for='User_Role'>User Role: </label>
+
+
+	<div class="container">
+
+		<div class="card o-hidden border-0 shadow-lg my-5">
+			<div class="card-body p-0">
+				<!-- Nested Row within Card Body -->
+				<div class="row">
+
+					<div class="col-lg-12">
+						<div class="p-5">
+							<div class="text-center">
+								<h1 class="h4 text-gray-900 mb-4">Add user</h1>
+							</div>
+							<form class="user method="POST" ACTION="./Add_user.php" enctype="multipart/form-data">
+								<!-- <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" >
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
+                  </div>
+                </div> -->
+								<div class="form-group">
+									<input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="User Name" name="User_Name ">
+									<input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Last Name" name="User_LastName">
+									<input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="User Password" name="User_Password">
+								</div>
+								<label for='User_Role'>User Role: </label>
 				<select id="User_Role" name="User_Role">
 					<option value="None">--Select User Role----</option>
 					<option value="admin">Admin</option>
 					<option value="teacher">Teacher</option>
 					<option value="student">Student</option>
 				</select>
+				<div>
 				<label for='User_Stage'>Student* stage: </label>
 				<select id="User_Stage" name="User_Stage">
 					<option value="0">No Stage</option>
@@ -54,18 +59,53 @@ include('./mydb.php');
 					<option value="3">Third Stage</option>
 					<option value="4">Fourth Stage</option>
 				</select>
-				<input name="submit" Type="submit" value="Add" />
-			</fieldset>
-			<?php
+				</div>
+								<!-- <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                  </div>
+                </div> -->
+								<a href="login.html" class="btn btn-primary btn-user btn-block">
+									Add User!
+								</a>
+								<hr>
+								<?php
 
-			if (isset($_GET['success'])) {
-				echo "<h3>You added a new user with the name " . $_GET['success'] . " successfully in the role " . $_GET['role'] . "<h3>";
-			}
-			?>
-		</form>
+								
+		 
+
+
+if (isset($_GET['success'])) {
+	echo "<h3>You added a new user with the name " . $_GET['success'] . " successfully in the role " . $_GET['role'] . "<h3>";
+}
+?>
+  
+								
+								
+								<!-- <a href="index.html" class="btn btn-google btn-user btn-block">
+                  <i class="fab fa-google fa-fw"></i> Register with Google
+                </a>
+                <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                  <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                </a> -->
+							</form>
+
+							<!-- <div class="text-center">
+                <a class="small" href="forgot-password.html">Forgot Password?</a>
+              </div>
+              <div class="text-center">
+                <a class="small" href="login.html">Already have an account? Login!</a>
+              </div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	</div>
+	
+		<?php include('footer.php'); ?>
 
-</body>
-
-</html>

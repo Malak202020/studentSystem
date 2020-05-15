@@ -1,27 +1,4 @@
-<?php
-session_start();
-include('./MyDB.php');
-?>
-<html>
-
-<head>
-  <link rel="stylesheet" type="text/css" href="Add_product.css">
-  <link rel="stylesheet" href="second-bar.css">
-  <link rel="stylesheet" href="header-second-bar.css">
-</head>
-
-<body bgcolor="#E6E6FA">
-  <header class="header-two-bars">
-    <div class="header-first-bar">
-      <div class="header-limiter">
-        <h1> <a href="admin.php">
-            <li>Home </span></li>
-          </a></h1>
-      </div>
-    </div>
-  </header>
-
-  <div class="form-style-5">
+<?php include('header.php'); ?>
     <form method="POST" ACTION="teacherSubject.php" enctype="multipart/form-data">
       <fieldset>
 
@@ -74,8 +51,4 @@ include('./MyDB.php');
       }
       
       ?>
-  </div>
-
-</body>
-
-</html>
+  <?php include('footer.php'); ?>

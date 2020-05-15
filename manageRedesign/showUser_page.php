@@ -1,38 +1,4 @@
-<?php
-session_start();
-
-include('MyDB.php'); // Database connection
-
-if (isset($_GET['User_ID']) && $_GET['User_ID'] != '') {
-  $MyDB->query("DELETE FROM user WHERE User_ID =" . $_GET['User_ID']);
-}
-?>
-
-<html>
-
-<head>
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" type="text/css" href="Pages_CSS.css">
-    <link rel="stylesheet" href="second-bar.css">
-    <link rel="stylesheet" href="header-second-bar.css">
-    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    </head>
-
-
-
-  <body bgcolor="#E6E6FA">
-
-    <header class="header-two-bars">
-      <div class="header-first-bar">
-        <div class="header-limiter">
-          <h1><a href="">StudentSystem <span> Admin <span> </span></a></h1>
-          <h1> <a href="admin.php">
-              <li>Home </span></li>
-            </a></h1>
-        </div>
-      </div>
-    </header>
+<?php include('header.php'); ?>
 
     <a href="#navigation">
       <div id="center">^</div>
@@ -72,8 +38,9 @@ if (isset($_GET['User_ID']) && $_GET['User_ID'] != '') {
           <?php } ?>
 
         </Table>
-        </div>
+
 
 
 
     }
+    <?php include('footer.php'); ?>
