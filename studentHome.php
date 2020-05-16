@@ -13,6 +13,7 @@
     <h3 class="m-0 font-weight-bold text-primary">Student Name: <?php echo $_SESSION["UserName"]; ?></h3>
     <h3 class="m-0 font-weight-bold text-primary">Student Stage: <?php echo $_SESSION["User_Stage"]; ?></h3>
     <?php
+ echo '<h3 class="m-0 font-weight-bold text-primary">Faculty: </h3>';
 
 $b = $MyDB->query("SELECT * FROM Department WHERE Dep_ID=".$_SESSION["User_Dep_ID"]);
 while ($dep = $b->fetch_assoc()) {
@@ -24,7 +25,7 @@ while ($dep = $b->fetch_assoc()) {
 
 
  } 
- 
+ echo '<h3 class="m-0 font-weight-bold text-primary">Subjects </h3>';
  $b = $MyDB->query("SELECT * FROM subject WHERE Sub_Dep=".$_SESSION["User_Dep_ID"]);
 while ($dep = $b->fetch_assoc()) {
     $user_subject = $dep["Sub_Name"];
