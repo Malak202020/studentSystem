@@ -1,48 +1,4 @@
-<?php 
-
-
-session_start();
-include('./MyDB.php');
-$Error = "";
-
-if(isset($_POST['sub'])){
-   $UserName=@$_POST['UserName'];
-   $Password=@$_POST['Password'];
-
-
-   $res=$MyDB->query("SELECT * FROM user WHERE User_Name='$UserName' and User_Pass='$Password'");
-
-   if($row = $res->fetch_assoc()){
-     $_SESSION['ID'] = $row['User_ID'];
-     $_SESSION['UserName'] = $row['User_Name'];
-     $_SESSION['User_Role'] = $row['User_Role'];
-
-     if($row['User_Role']== 'admin'){
-
-     header('Location: http://localhost/studentsystem/manageredesign/admin.php');
-     exit();
-   }
-
-   elseif($row['User_Role']== 'teacher'){
-
-     header('Location: http://localhost/studentsystem/teacherHome.php');
-     exit();
-   }
-
-  elseif($row['User_Role']== 'student'){
-
-     header('Location: http://localhost/studentsystem/studentPage.php');
-     exit();
-   }
-
-   	  }else{
-         $Error= "WRONG NAME OR PASSWORD";
-       }
-
-   }
-   include('loginheader.php');
-   ?>
-
+<?php include('header.php'); ?>
 <div class="container-fluid">
 
 <div class="container">
@@ -55,7 +11,7 @@ if(isset($_POST['sub'])){
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-left">
-                <h1 class="h4 text-gray-900 mb-4">login page</h1>
+                <h1 class="h4 text-gray-900 mb-4">Upload Material</h1>
               </div>
               <form class="user" METHOD="POST">
                 <div class="form-group row">

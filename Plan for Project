@@ -35,22 +35,11 @@ adding department [done] (SECOND VIDEO)
 
 Features needed for Teacher:
 
-1) Show who is logged in 
-2) Show Departments/Subjects/stages (Table format)
+1) Show who is logged in [DONE]
+2) Show Departments/Subjects/stages (Table format) [DONE]
 3) Be able to open Subjects and check all students / give assignments (SELECT * FROM user WHERE Stage = 2 && Dep = Computer) //No subject/course selection
 
 Features needed for Student:
 
 1) Show student info
 2) Show assigned assignments from teacher/subject
-
-
-*****For Malak:
-
-1) Make the login page in manage REDESIGNED
-
-Notes
-a) Form is ready in studentsystem/Loginpage.php
-b) Xwa gawraya inshalla pet dakre
-
-*DON'T FORGET THE DATA TABLE AS WELL (BAS 1 PAGE'A)
