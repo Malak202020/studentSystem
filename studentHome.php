@@ -66,7 +66,7 @@ while ($dep = $b->fetch_assoc()) {
           <tbody>
             <?php
 
-            $b = $MyDB->query("SELECT * FROM material,assignment WHERE material.mat_dep =".$_SESSION["User_Dep_ID"]." AND material.mat_stage = ".$_SESSION["User_Stage"]." AND assignment.assign_stage = ".$_SESSION["User_Stage"]." AND assignment.assign_dep = ".$_SESSION["User_Dep_ID"]);
+            $b = $MyDB->query("SELECT DISTINCT * FROM material,assignment WHERE material.mat_dep =".$_SESSION["User_Dep_ID"]." AND assignment.assign_stage = ".$_SESSION["User_Stage"]." AND assignment.assign_dep = ".$_SESSION["User_Dep_ID"]." GROUP BY assignment.assign_stage");
             while ($ex = $b->fetch_assoc()) {
             ?>
               <Tr>
