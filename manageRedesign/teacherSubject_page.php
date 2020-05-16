@@ -27,7 +27,7 @@
         
           </div>
           <label for='Subject_Teacher'>Select Teacher: </label>
-          <SELECT  name='Subject_Teacher  '>
+          <SELECT  name='Subject_Teacher'>
           <?php
           //$UserRole=@$_POST['teacher'];
           $teacher = $MyDB->query("SELECT * FROM user WHERE User_Role = 'teacher'");
