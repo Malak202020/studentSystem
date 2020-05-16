@@ -13,6 +13,8 @@ if(isset($_POST['submit'])) {
     $material_stage = $_GET["Sub_Stage"];
     $material_teacher = $_GET["sub_teacher"];
     $material_name = $_GET["sub_name"];
+    $uploadStatus="";
+
 
     $materialExt=explode('.', $materialName);
     $materialActualExt=strtolower(end($materialExt));
@@ -37,14 +39,14 @@ if(isset($_POST['submit'])) {
 
             mysqli_query($MyDB, $querymaterial);
 
-           // header("location: uploadMaterial_Page.php?sub_teacher=$material_teacher&&subject_ID=$material_sub&&Sub_Dep=$material_dep&&Sub_Stage=$material_stage");
+            header("location: ./teacherHome.php");
 
-           echo "Successfully uploaded!";
+           $uploadStatus = "Successfully uploaded!";
         } else {
-            echo "there was an error uploading your file)):";
+            $uploadStatus = "there was an error uploading your file";
         }
     } else {
-        echo "you can't upload file of this type you scum D:<";
+        $uploadStatus = "you can't upload file of this type";
     }
 }
 

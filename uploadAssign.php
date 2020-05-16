@@ -13,6 +13,7 @@ if(isset($_POST['submit'])) {
     $assign_stage = $_GET["Sub_Stage"];
     $assign_teacher = $_GET["sub_teacher"];
     $assign_name = $_GET["sub_name"];
+    $uploadStatus="";
 
     $assignExt=explode('.', $assignName);
     $assignActualExt=strtolower(end($assignExt));
@@ -36,15 +37,14 @@ if(isset($_POST['submit'])) {
             VALUES (NULL,'$assignName','$assign_teacher','$assign_dep', '$assign_stage')";
 
             mysqli_query($MyDB, $queryassign);
+            $uploadStatus = "Successfully uploaded!";
 
-           header("location: uploadassign_Page.php?sub_teacher=$assign_teacher&&subject_ID=$assign_sub&&Sub_Dep=$assign_dep&&Sub_Stage=$assign_stage");
-                
-           echo "Successfully uploaded!";
+           header("location: ./teacherHome.php");
         } else {
-            echo "there was an error uploading your file)):";
+            $uploadStatus = "there was an error uploading your file";
         }
     } else {
-        echo "you can't upload file of this type you scum D:<";
+        $uploadStatus = "you can't upload file of this type";
     }
 }
 

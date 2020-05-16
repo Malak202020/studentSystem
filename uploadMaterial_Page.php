@@ -17,8 +17,6 @@
                 <p><input type="file" name="fileUpload" id="fileUpload" style="width:100%" required></p>
                 <p><button type="submit" name="submit"> UPLOAD </button></p>
             </form>
-
-              
             </div>
           </div>
         </div>
