@@ -13,7 +13,7 @@
         <div class="text-center">
           <h1 class="h4 text-gray-900 mb-4">Add subject</h1>
         </div>
-        <div class="add subject"  method="POST" ACTION="./teacherSubject.php" enctype="multipart/form-data">
+        <form class="user" method="POST" ACTION="./teacherSubject.php" enctype="multipart/form-data">
           <!-- <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
               <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" >
@@ -23,7 +23,7 @@
             </div>
           </div> -->
            <div class="form-group ">
-            <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="subject Name" name="Subject_Name ">
+            <input type="text" class="form-control form-control-user" id="exampleInputEmail" placeholder="subject Name" name="Subject_Name">
         
           </div>
           <label for='Subject_Teacher'>Select Teacher: </label>

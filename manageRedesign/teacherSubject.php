@@ -16,6 +16,6 @@ VALUES (NULL,'$Subject_Name', '$Subject_Teacher', '$subject_department', '$Subje
 
 print_r($_POST);
 
-header("Location:teacherSubject_Page.php?success=".$Subject_Name);
+header("Location:teacherSubject_page.php?success=".$Subject_Name);
 }
 ?>
