@@ -37,8 +37,7 @@ Features needed for Teacher:
 
 1) Show who is logged in [DONE]
 2) Show Departments/Subjects/stages (Table format) [DONE]
-3) Be able to open Subjects and check all students / give assignments (SELECT * FROM user WHERE Stage = 2 && Dep = Computer) //No subject/course selection
-[3 IN PROGRESS]
+3) Be able to open Subjects and check all students / give assignments [assignments done, students not done]
 
 
 Features needed for Student:
