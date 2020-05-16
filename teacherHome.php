@@ -47,8 +47,7 @@
                 <Td><?php echo $ex['Sub_Dep']; ?></Td>
                 <Td><?php echo $ex['Sub_Stage']; ?></Td>
                 <td>
-                <a href="uploadAssign_Page.php?sub_name=<?php echo $ex['Sub_Name']; ?>&subject_ID=<?php echo $ex['Sub_ID']; ?>&Sub_Dep=<?php echo $ex['Sub_Dep']; ?>&Sub_Stage=<?php echo $ex['Sub_Stage']; ?> 
-                " class="btn btn-success btn-icon-split">
+                <a href="uploadAssign_Page.php?sub_name=<?php echo $ex['Sub_Name']; ?>&subject_ID=<?php echo $ex['Sub_ID']; ?>&Sub_Dep=<?php echo $ex['Sub_Dep']; ?>&Sub_Stage=<?php echo $ex['Sub_Stage']; ?>" class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-check"></i>
                     </span>

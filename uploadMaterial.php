@@ -22,10 +22,10 @@ if(isset($_POST['submit'])) {
     if (in_array($materialActualExt, $allowed)) {
         if ($materialError === 0) {
 
-            $materialDestination = 'uploads/'.$material_name.$material_stage.$material_sub;
+            $materialDestination = 'uploads/material/'.$material_name.$material_stage.$material_sub;
 
             if(!file_exists('$materialDestination')){
-                mkdir('uploads/'.$material_name.$material_stage.$material_sub, 0777, true);    
+                mkdir('uploads/material/'.$material_name.$material_stage.$material_sub, 0777, true);    
             }
 
             $materialDestination .= '/'.$materialName;
