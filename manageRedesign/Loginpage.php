@@ -1,4 +1,43 @@
-<?php include('header.php'); ?>
+<?php include('loginheader.php');
+
+
+if(isset($_POST['sub'])){
+   $UserName=@$_POST['UserName'];
+   $Password=@$_POST['Password'];
+
+
+   $res=$MyDB->query("SELECT User_ID,User_name,User_Pass,User_Role FROM user WHERE User_name='$UserName' and User_Pass='$Password'");
+
+   if($row = $res->fetch_assoc()){
+     $_SESSION['ID'] = $row['User_ID'];
+     $_SESSION['UserName'] = ['User_Name'];
+
+     if($row['User_Role']== 'admin'){
+
+     header('Location: http://localhost/studentsystem/manage/admin.php');
+     exit();
+   }
+
+   elseif($row['User_Role']== 'teacher'){
+
+     header('Location: http://localhost/studentsystem/TchrHome.php');
+     exit();
+   }
+
+  elseif($row['User_Role']== 'student'){
+
+     header('Location: http://localhost/studentsystem/studentPage.php');
+     exit();
+   }
+
+   	  }else{
+         $Error= "WRONG NAME OR PASSWORD";
+       }
+
+   }
+
+   ?>
+
 <div class="container-fluid">
 
 <div class="container">
@@ -13,7 +52,7 @@
               <div class="text-left">
                 <h1 class="h4 text-gray-900 mb-4">login page</h1>
               </div>
-              <form class="user">
+              <form class="user" METHOD="POST">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                   <!--  <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
@@ -35,7 +74,7 @@
                     <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
                   </div>
                 </div> -->
-                <input name="submit" Type="submit" value="Add" class="btn btn-primary btn-user btn-block" />
+                <input name="sub" Type="submit" value="Login" class="btn btn-primary btn-user btn-block" />
 								<hr>
 								
                 <hr><!--

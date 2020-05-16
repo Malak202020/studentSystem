@@ -1,51 +1,10 @@
 <?php
 
- session_start();
-include('./mydb.php');
-$Error = "";
+include("header.php");
 ?>
 
-<html>
-<body>
 
 
-
-  </head>
-
-
-  <body bgcolor="#E6E6FA">
-
-  <header class="header-two-bars">
-  	<div class="header-first-bar">
-  		<div class="header-limiter">
-  			<h1><a href="">StudentSystem<span> Departments  </span></a></h1>
-       <h1><a href="aboutus.php"><li>About salahadin UNI</span></li></a></h1>
-       <h1><a href="index.php"><li>Home</span></li></a></h1>
-
-
-  		</div>
-  	</div>
-  </header>
-
-
-
-
-       <link rel="stylesheet" href="Style.css">
-     <link rel="stylesheet" type="text/css" href="Pages_CSS.css">
-     <link rel="stylesheet" href="second-bar.css">
-     <link rel="stylesheet" href="header-second-bar.css">
-     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-     </head>
-
-     <body bgcolor="#E6E6FA">
-
-
-  </ul>
-
-</div>
-<a href="#navigation"><div id="top">^</div></a>
-<div id="content" STYLE="TEXT-ALIGN:CENTER;">
 
   <?php
   include('MyDB.php');
@@ -68,6 +27,8 @@ $Error = "";
 
 
  </div>
+<?php
 
-</body>
-</html>
+include("footer.php");
+
+?>

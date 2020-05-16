@@ -1,50 +1,8 @@
-<?php
+<?php 
 
-session_start();
-include('./mydb.php');
-$Error = "";
+include('header.php');
+
 ?>
-
-<html>
-
-<head>
-
-
-  <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" type="text/css" href="Pages_CSS.css">
-  <link rel="stylesheet" href="second-bar.css">
-  <link rel="stylesheet" href="header-second-bar.css">
-  <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-</head>
-
-<body>
-
-
-
-  <body bgcolor="#E6E6FA">
-
-    <header class="header-two-bars">
-      <div class="header-first-bar">
-        <div class="header-limiter">
-          <h1><a href="">StudentSystem<span> Facultis </span></a></h1>
-          <h1><a href="aboutus.php">
-              <li>About salahadin UNI</span></li>
-            </a></h1>
-
-
-        </div>
-      </div>
-    </header>
-
-
-
-
-
-    <body bgcolor="#E6E6FA">
-
-
-      </ul>
 
       </div>
       <a href="#navigation">
@@ -72,6 +30,8 @@ $Error = "";
 
       </div>
 
-    </body>
+<?php
 
-</html>
+include('footer.php');
+
+?>

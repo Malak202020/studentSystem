@@ -1,11 +1,13 @@
+<?php
+
+session_start();
+include('./MyDB.php');
+$Error = "";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <?php
 
-  session_start();
-  include('./MyDB.php');
-  $Error = "";
-  ?>
 <head>
 
   <meta charset="utf-8">
