@@ -3,34 +3,62 @@
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Teacher Page</h1>
+  <h1 class="h3 mb-2 text-gray-800">Student Page</h1>
 
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Subjects</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Student information</h6>
+    </div>
+    <h3 class="m-0 font-weight-bold text-primary">Student Name: <?php echo $_SESSION["UserName"]; ?></h3>
+    <h3 class="m-0 font-weight-bold text-primary">Student Stage: <?php echo $_SESSION["User_Stage"]; ?></h3>
+    <?php
+
+$b = $MyDB->query("SELECT * FROM Department WHERE Dep_ID=".$_SESSION["User_Dep_ID"]);
+while ($dep = $b->fetch_assoc()) {
+
+
+    $user_dep = $dep["Dep_Name"];
+
+    echo $user_dep."<br>";
+
+
+ } 
+ 
+ $b = $MyDB->query("SELECT * FROM subject WHERE Sub_Dep=".$_SESSION["User_Dep_ID"]);
+while ($dep = $b->fetch_assoc()) {
+    $user_subject = $dep["Sub_Name"];
+    echo $user_subject."<br>";
+ } ?>
+
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Assignments/Material</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Subject Name</th>
-              <th>Department ID</th>
+            <th>Material Name</th>
+            <th>Assignment Name</th>
+             <!-- <th>Department ID</th>
               <th>Stage</th>
               <th>Action</th>
-              <!-- <th>Password</th>
+               <th>Password</th>
                        <th>Start date</th>
                       <th>Salary</th> -->
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <th>Subject Name</th>
-              <th>Department ID</th>
+              <th>Material Name</th>
+              <th>Assignment Name</th>
+             <!-- <th>Department ID</th>
               <th>Stage</th>
               <th>Action</th>
-              <!--<th>Password</th>
+              <th>Password</th>
                        <th>Start date</th>
                       <th>Salary</th> -->
             </tr>
@@ -38,28 +66,12 @@
           <tbody>
             <?php
 
-            $b = $MyDB->query("SELECT * FROM subject WHERE subject.Sub_Teacher =" . $_SESSION['ID']);
+            $b = $MyDB->query("SELECT * FROM material,assignment WHERE material.mat_dep =".$_SESSION["User_Dep_ID"]." AND material.mat_stage = ".$_SESSION["User_Stage"]." AND assignment.assign_stage = ".$_SESSION["User_Stage"]." AND assignment.assign_dep = ".$_SESSION["User_Dep_ID"]);
             while ($ex = $b->fetch_assoc()) {
             ?>
               <Tr>
-                <Td> <?php echo $ex['Sub_Name']; ?></Td>
-                <Td><?php echo $ex['Sub_Dep']; ?></Td>
-                <Td><?php echo $ex['Sub_Stage']; ?></Td>
-                <td>
-                <a href="uploadAssign_Page.php?sub_name=<?php echo $ex['Sub_Name']; ?>&subject_ID=<?php echo $ex['Sub_ID']; ?>&Sub_Dep=<?php echo $ex['Sub_Dep']; ?>&Sub_Stage=<?php echo $ex['Sub_Stage']; ?>" class="btn btn-success btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-check"></i>
-                    </span>
-                    <span class="text">Upload assignment</span>
-                  </a>
-                  <a href="uploadMaterial_Page.php?sub_name=<?php echo $ex['Sub_Name']; ?>&sub_teacher=<?php echo $_SESSION["ID"]; ?>&subject_ID=<?php echo $ex['Sub_ID']; ?>&Sub_Dep=<?php echo $ex['Sub_Dep']; ?>&Sub_Stage=<?php echo $ex['Sub_Stage']; ?> " class="btn btn-info btn-icon-split">
-                    <span class="icon text-white-50">
-                      <i class="fas fa-info-circle"></i>
-                    </span>
-                    <span class="text">Upload material</span>
-                  </a>
-                </td>
-
+                <Td> <?php echo $ex['mat_name']; ?></Td>
+                <Td> <?php echo $ex['assign_name']; ?></Td>
             <?php } ?>
               </Tr>
           </tbody>

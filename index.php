@@ -16,6 +16,8 @@ if(isset($_POST['sub'])){
      $_SESSION['ID'] = $row['User_ID'];
      $_SESSION['UserName'] = $row['User_Name'];
      $_SESSION['User_Role'] = $row['User_Role'];
+     $_SESSION['User_Stage'] = $row['User_Stage'];
+     $_SESSION['User_Dep_ID'] = $row['User_Department'];
 
      if($row['User_Role']== 'admin'){
 
@@ -31,7 +33,7 @@ if(isset($_POST['sub'])){
 
   elseif($row['User_Role']== 'student'){
 
-     header('Location: http://localhost/studentsystem/studentPage.php');
+     header('Location: http://localhost/studentsystem/studentHome.php');
      exit();
    }
 
