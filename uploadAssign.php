@@ -1,44 +1,47 @@
-<?php include('header.php'); ?>
-<div class="container-fluid">
+<?php
 
-<div class="container">
+if(isset($_POST['submit'])) {
+    $assign=$_FILES['fileUpload'];
+    $assignName=$_FILES['fileUpload']['name'];
+    $assignTmpName=$_FILES['fileUpload']['tmp_name'];
+    $assignSize=$_FILES['fileUpload']['size'];
+    $assignError=$_FILES['fileUpload']['error'];
+    $assignType=$_FILES['fileUpload']['type'];
+    $username=$_SESSION['username'];
+    $userID=$_SESSION['userID'];
+    $professionID=$_SESSION['professionID'];
 
-    <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-        <div class="row">
-          <div class="col-lg-5 d-none d-lg-block "></div>
-          <div class="col-lg-7">
-            <div class="p-5">
-              <div class="text-left">
-                <h1 class="h4 text-gray-900 mb-4">Upload Assignment</h1>
-              </div>
-              <form class="user" METHOD="POST">
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                  <!--  <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
-                  </div>
-                </div>  -->
-                <div class="form-group">
-                  <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="UserName" placeholder="your username">
-                  <input type="text" class="form-control form-control-user" id="exampleInputEmail"name ="Password" placeholder="your password">
-                </div>
+    $assignExt=explode('.', $assignName);
+    $assignActualExt=strtolower(end($assignExt));
 
-                <input name="sub" Type="submit" value="Login" class="btn btn-primary btn-user btn-block" />
-								<hr>
-								
-                <hr>
+    $allowed = array('jpg','jpeg','png');
 
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    if (in_array($assignActualExt, $allowed)) {
+        if ($assignError === 0) {
 
-  </div>
-</div> 
-<?php include('footer.php'); ?>
+            $assignDestination = 'uploads/'.$username.$userID;
+
+            if(!file_exists('$assignDestination')){
+                mkdir('uploads/'.$username.$userID, 0777, true);    
+            }
+
+            $assignDestination .= '/'.$assignName;
+
+            move_uploaded_file($assignTmpName, $assignDestination);
+
+            $queryassign="INSERT INTO material(userID, mat_Name)
+            VALUES ('$userID','$assignName')";
+
+            mysqli_query($conn, $queryassign);
+
+            header("location: profile.php?userID=$userID&&username=$username&&professionID=$professionID'");
+        } else {
+            echo "there was an error uploading your file)):";
+        }
+    } else {
+        echo "you can't upload file of this type you scum D:<";
+    }
+}
+
+
+?>

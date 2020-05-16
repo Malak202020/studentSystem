@@ -1,44 +1,52 @@
-<?php include('header.php'); ?>
-<div class="container-fluid">
+<?php
+include('./MyDB.php');
+if(isset($_POST['submit'])) {
+    $material=$_FILES['fileUpload'];
+    $materialName=$_FILES['fileUpload']['name'];
+    $materialTmpName=$_FILES['fileUpload']['tmp_name'];
+    $materialSize=$_FILES['fileUpload']['size'];
+    $materialError=$_FILES['fileUpload']['error'];
+    $materialType=$_FILES['fileUpload']['type'];
 
-<div class="container">
+    $material_sub = $_GET["subject_ID"];
+    $material_dep = $_GET["Sub_Dep"];
+    $material_stage = $_GET["Sub_Stage"];
+    $material_teacher = $_GET["sub_teacher"];
+    $material_name = $_GET["sub_name"];
 
-    <div class="card o-hidden border-0 shadow-lg my-5">
-      <div class="card-body p-0">
-        <!-- Nested Row within Card Body -->
-        <div class="row">
-          <div class="col-lg-5 d-none d-lg-block "></div>
-          <div class="col-lg-7">
-            <div class="p-5">
-              <div class="text-left">
-                <h1 class="h4 text-gray-900 mb-4">Upload Material</h1>
-              </div>
-              <form class="user" METHOD="POST">
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                  <!--  <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
-                  </div>
-                </div>  -->
-                <div class="form-group">
-                  <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="UserName" placeholder="your username">
-                  <input type="text" class="form-control form-control-user" id="exampleInputEmail"name ="Password" placeholder="your password">
-                </div>
+    $materialExt=explode('.', $materialName);
+    $materialActualExt=strtolower(end($materialExt));
 
-                <input name="sub" Type="submit" value="Login" class="btn btn-primary btn-user btn-block" />
-								<hr>
-								
-                <hr>
+    $allowed = array('jpg','jpeg','png','docx','pdf','ppt');
 
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    if (in_array($materialActualExt, $allowed)) {
+        if ($materialError === 0) {
 
-  </div>
-</div> 
-<?php include('footer.php'); ?>
+            $materialDestination = 'uploads/'.$material_name.$material_stage.$material_sub;
+
+            if(!file_exists('$materialDestination')){
+                mkdir('uploads/'.$material_name.$material_stage.$material_sub, 0777, true);    
+            }
+
+            $materialDestination .= '/'.$materialName;
+
+            move_uploaded_file($materialTmpName, $materialDestination);
+
+            $querymaterial="INSERT INTO material(mat_ID, mat_name, mat_teacher, mat_dep, mat_stage)
+            VALUES (NULL,'$materialName','$material_teacher','$material_dep', '$material_stage')";
+
+            mysqli_query($MyDB, $querymaterial);
+
+           // header("location: uploadMaterial_Page.php?sub_teacher=$material_teacher&&subject_ID=$material_sub&&Sub_Dep=$material_dep&&Sub_Stage=$material_stage");
+
+           echo "Successfully uploaded!";
+        } else {
+            echo "there was an error uploading your file)):";
+        }
+    } else {
+        echo "you can't upload file of this type you scum D:<";
+    }
+}
+
+
+?>
