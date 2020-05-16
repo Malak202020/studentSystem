@@ -43,15 +43,10 @@
                   <Tr>
                                 <Td> <?php echo $ex['F_ID']; ?></Td>
                                 <Td><?php echo $ex['F_Name']; ?></Td>
-                                <Td><?php echo $ex['Dep_Name']; ?></Td>
+                                <Td><?php echo $ex['Dep_Name']; }?></Td>
                                 
                                 </Tr>
-    
-                          } 
-                       
-
-                
-                 ?> </tbody>
+ </tbody>
                 </table>
               </div>
             </div>
@@ -111,4 +106,3 @@
 
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
-
