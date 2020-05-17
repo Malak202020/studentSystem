@@ -33,8 +33,8 @@ if(isset($_POST['submit'])) {
 
             move_uploaded_file($assignTmpName, $assignDestination);
 
-            $queryassign="INSERT INTO assignment(assign_ID, assign_name, assign_teacher, assign_dep, assign_stage)
-            VALUES (NULL,'$assignName','$assign_teacher','$assign_dep', '$assign_stage')";
+            $queryassign="INSERT INTO assignment(assign_ID, assign_name, assign_teacher, assign_dep, assign_stage, assign_subject_ID,assign_subject)
+            VALUES (NULL,'$assignName','$assign_teacher','$assign_dep', '$assign_stage', '$assign_sub','$assign_name')"; //update
 
             mysqli_query($MyDB, $queryassign);
             $uploadStatus = "Successfully uploaded!";
