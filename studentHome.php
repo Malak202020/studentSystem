@@ -66,7 +66,7 @@
             <tbody>
               <?php
 
-              $getMaterial = $MyDB->query("SELECT  * FROM material WHERE mat_dep =" . $_SESSION["User_Dep_ID"] . " AND mat_stage = " . $_SESSION["User_Stage"]);
+              $getMaterial = $MyDB->query("SELECT * FROM material WHERE mat_dep =".$_SESSION["User_Dep_ID"]." AND mat_stage = ". $_SESSION["User_Stage"]);
               while ($material = $getMaterial->fetch_assoc()) {
               ?>
                 <Tr>
@@ -122,14 +122,16 @@
 
             while ($assign = $getAssign->fetch_assoc()) {
             ?>
-              <Td> <?php echo $assign['assign_subject']; ?>
+            <tr>
+              <Td> <?php echo $assign['assign_subject']; ?> </td>
               <Td> <?php echo $assign['assign_name']; ?>
                 <a href="uploads/assign/<?php echo $assign['assign_subject'].$assign['assign_stage'].$assign['assign_dep']."/".$assign['assign_name']; ?>" class="btn btn-success btn-circle">
                   <i class="fas fa-check"></i>
                 </a>
               </Td>
+              </Tr>
+
             <?php } ?>
-            </Tr>
           </tbody>
         </table>
       </div>

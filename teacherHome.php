@@ -111,9 +111,10 @@
                       <i class="fas fa-check"></i>
                     </a>
                   </Td>
+                  </Tr>
+
                 <?php }
                 ?>
-                </Tr>
             </tbody>
           </table>
         </div>
@@ -153,7 +154,7 @@
           </tfoot>
           <tbody>
             <?php
-            $getAssign = $MyDB->query("SELECT * FROM assignment WHERE assign_teacher =".$_SESSION["ID"] );
+            $getAssign = $MyDB->query("SELECT * FROM assignment WHERE assign_teacher =".$_SESSION["ID"]);
 
             while ($assign = $getAssign->fetch_assoc()) {
             ?>

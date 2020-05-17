@@ -19,7 +19,7 @@ if(isset($_POST['submit'])) {
     $materialExt=explode('.', $materialName);
     $materialActualExt=strtolower(end($materialExt));
 
-    $allowed = array('jpg','jpeg','png','docx','pdf','ppt');
+    $allowed = array('jpg','jpeg','png','docx','pdf','ppt','pptx');
 
     if (in_array($materialActualExt, $allowed)) {
         if ($materialError === 0) {

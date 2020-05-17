@@ -58,9 +58,8 @@
             </SELECT>
           
   <div>
-  <label for='User_Stage'>Student* stage: </label>
-  <select id="User_Stage" name="User_Stage">
-    <option value="0">No Stage</option>
+  <label for='Subject_Stage'>Student* stage: </label>
+  <select id="Subject_Stage" name="Subject_Stage">
     <option value="1">First Stage</option>
     <option value="2">Second Stage</option>
     <option value="3">Third Stage</option>

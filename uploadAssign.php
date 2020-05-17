@@ -18,7 +18,7 @@ if(isset($_POST['submit'])) {
     $assignExt=explode('.', $assignName);
     $assignActualExt=strtolower(end($assignExt));
 
-    $allowed = array('jpg','jpeg','png','docx','pdf','ppt');
+    $allowed = array('jpg','jpeg','png','docx','pdf','ppt','pptx'); //only these formats are allowed
 
     if (in_array($assignActualExt, $allowed)) {
         if ($assignError === 0) {
@@ -33,8 +33,8 @@ if(isset($_POST['submit'])) {
 
             move_uploaded_file($assignTmpName, $assignDestination);
 
-            $queryassign="INSERT INTO assignment(assign_ID, assign_name, assign_teacher, assign_dep, assign_stage, assign_subject_ID,assign_subject)
-            VALUES (NULL,'$assignName','$assign_teacher','$assign_dep', '$assign_stage', '$assign_sub','$assign_name')";
+            $queryassign="INSERT INTO assignment(assign_ID, assign_name, assign_teacher, assign_dep, assign_stage)
+            VALUES (NULL,'$assignName','$assign_teacher','$assign_dep', '$assign_stage')";
 
             mysqli_query($MyDB, $queryassign);
             $uploadStatus = "Successfully uploaded!";

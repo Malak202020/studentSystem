@@ -18,7 +18,7 @@
                       <th>User ID</th>
                       <th>Username</th>
                       <th>User Role</th>
-                      <th>Password</th>
+                      
                       <!-- <th>Start date</th>
                       <th>Salary</th> -->
                     </tr>
@@ -28,7 +28,7 @@
                       <th>User ID</th>
                       <th>Username</th>
                       <th>User Role</th>
-                      <th>Password</th>
+                      
                       <!-- <th>Start date</th>
                       <th>Salary</th> -->
                     </tr>
@@ -43,7 +43,7 @@
                             <Td> <?php echo $ex['User_ID']; ?></Td>
                             <Td><?php echo $ex['User_Name']; ?></Td>
                             <Td><?php echo $ex['User_Role']; ?></Td>
-                            <Td> <?php echo $ex['User_Pass']; ?></Td>
+                            
                             </Tr>
 
                     <?php } ?>
