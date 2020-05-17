@@ -48,13 +48,13 @@
                 <td>
                 <a href="uploadAssign_Page.php?sub_name=<?php echo $ex['Sub_Name']; ?>&subject_ID=<?php echo $ex['Sub_ID']; ?>&Sub_Dep=<?php echo $ex['Sub_Dep']; ?>&Sub_Stage=<?php echo $ex['Sub_Stage']; ?>" class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
-                      <i class="fas fa-check"></i>
+                      <i class="fa fa-calendar-plus"></i>
                     </span>
                     <span class="text">Upload assignment</span>
                   </a>
                   <a href="uploadMaterial_Page.php?sub_name=<?php echo $ex['Sub_Name']; ?>&sub_teacher=<?php echo $_SESSION["ID"]; ?>&subject_ID=<?php echo $ex['Sub_ID']; ?>&Sub_Dep=<?php echo $ex['Sub_Dep']; ?>&Sub_Stage=<?php echo $ex['Sub_Stage']; ?> " class="btn btn-info btn-icon-split">
                     <span class="icon text-white-50">
-                      <i class="fas fa-info-circle"></i>
+                      <i class="fas fa-book"></i>
                     </span>
                     <span class="text">Upload material</span>
                   </a>

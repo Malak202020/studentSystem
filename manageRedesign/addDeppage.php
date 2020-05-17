@@ -11,6 +11,8 @@
 				<div class="row">
 
 					<div class="col-lg-12">
+					<form class="user" method="POST" ACTION="./AddDep.php" enctype="multipart/form-data">
+
 								<label for='faculties'>Select Faculty: </label>
 			<select id="faculties" name="faculties">
 			<?php
@@ -31,7 +33,6 @@
 							<div class="text-center">
 								<h1 class="h4 text-gray-900 mb-4">Add Department!</h1>
 							</div>
-							<form class="user" method="POST" ACTION="./AddDep.php" enctype="multipart/form-data">
 								<!-- <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name" >

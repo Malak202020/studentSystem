@@ -11,7 +11,7 @@
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-left">
-                <h1 class="h4 text-gray-900 mb-4">Upload Material</h1>
+                <h1 class="h4 text-gray-900 mb-4">Upload Assignment</h1>
               </div>
               <form action="uploadAssign.php?sub_name=<?php echo $_GET["sub_name"]; ?>&sub_teacher=<?php echo $_SESSION['ID']; ?>&subject_ID=<?php echo $_GET['subject_ID']; ?>&Sub_Dep=<?php echo $_GET['Sub_Dep']; ?>&Sub_Stage=<?php echo $_GET['Sub_Stage']; ?>" method="POST" enctype="multipart/form-data" class="user" >
                 <p><input type="file" name="fileUpload" id="fileUpload" style="width:100%" required></p>

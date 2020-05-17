@@ -3,12 +3,12 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Faculties & Subjects</h1>
+          <h1 class="h3 mb-2 text-gray-800">Faculties & Departments</h1>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">List of Faculties & Their subjects</h6>
+              <h6 class="m-0 font-weight-bold text-primary">List of Faculties & their departments</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -17,7 +17,7 @@
                     <tr>
                       <th>Faculty ID</th>
                       <th>Faculty name</th>
-                      <th>Subject Name</th>
+                      <th>Department Name</th>
                      <!-- <th>Password</th>
                        <th>Start date</th>
                       <th>Salary</th> -->
@@ -27,7 +27,7 @@
                     <tr>
                       <th>Faculty ID</th>
                       <th>Faculty name</th>
-                      <th>Subject Name</th>
+                      <th>Department Name</th>
                       <!--<th>Password</th>
                        <th>Start date</th>
                       <th>Salary</th> -->
