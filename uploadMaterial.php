@@ -46,7 +46,7 @@ if(isset($_POST['submit'])) {
             $uploadStatus = "there was an error uploading your file";
         }
     } else {
-        $uploadStatus = "you can't upload file of this type";
+        $uploadStatus = "you can't upload file of this type"; //update
     }
 }
 
