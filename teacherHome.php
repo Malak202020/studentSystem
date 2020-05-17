@@ -67,6 +67,110 @@
       </div>
     </div>
   </div>
+  <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Uploaded materials by <?php echo $_SESSION["UserName"] ; ?></h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Subject Name</th>
+                <th>Material Name</th>
+                <!-- <th>Department ID</th>
+              <th>Stage</th>
+              <th>Action</th>
+               <th>Password</th>
+                       <th>Start date</th>
+                      <th>Salary</th> -->
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Subject Name</th>
+                <th>Material Name</th>
+                <!-- <th>Department ID</th>
+              <th>Stage</th>
+              <th>Action</th>
+              <th>Password</th>
+                       <th>Start date</th>
+                      <th>Salary</th> -->
+              </tr>
+            </tfoot>
+            <tbody>
+              <?php
+
+              $getMaterial = $MyDB->query("SELECT * FROM material WHERE mat_teacher =".$_SESSION["ID"] );
+              while ($material = $getMaterial->fetch_assoc()) {
+              ?>
+                <Tr>
+                  <Td><?php echo $material['mat_subject']; ?> </td>
+                  <Td> <?php echo $material['mat_name']; ?>
+                    <a href="uploads/material/<?php echo $material['mat_subject'] . $material['mat_stage'] . $material['mat_dep'] . "/" . $material['mat_name']; ?>" class="btn btn-success btn-circle">
+                      <i class="fas fa-check"></i>
+                    </a>
+                  </Td>
+                <?php }
+                ?>
+                </Tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Uploaded assignments by <?php echo $_SESSION["UserName"] ; ?></h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Subject Name</th>
+              <th>Assignment Name</th>
+              <!-- <th>Department ID</th>
+              <th>Stage</th>
+              <th>Action</th>
+               <th>Password</th>
+                       <th>Start date</th>
+                      <th>Salary</th> -->
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Subject Name</th>
+              <th>Assignment Name</th>
+              <!-- <th>Department ID</th>
+              <th>Stage</th>
+              <th>Action</th>
+              <th>Password</th>
+                       <th>Start date</th>
+                      <th>Salary</th> -->
+            </tr>
+          </tfoot>
+          <tbody>
+            <?php
+            $getAssign = $MyDB->query("SELECT * FROM assignment WHERE assign_teacher =".$_SESSION["ID"] );
+
+            while ($assign = $getAssign->fetch_assoc()) {
+            ?>
+              <Td> <?php echo $assign['assign_subject']; ?> </td>
+              <Td> <?php echo $assign['assign_name']; ?>
+                <a href="uploads/assign/<?php echo $assign['assign_subject'].$assign['assign_stage'].$assign['assign_dep']."/".$assign['assign_name']; ?>" class="btn btn-success btn-circle">
+                  <i class="fas fa-check"></i>
+                </a>
+              </Td>
+              </Tr>
+
+            <?php } ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 </div>
 <!-- /.container-fluid -->

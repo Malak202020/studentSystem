@@ -42,8 +42,9 @@ Features needed for Teacher:
 
 Features needed for Student:
 
-1) Show student info (Stage, faculty, class)
-2) Show assigned assignments from teacher/subject
-
+1) Show student info (Stage, faculty, class) [DONE]
+2) Make sure to link the subject to each assignment/material [DONE]
+3) Create download button for assignment and Material [Material DONE]
 ******************************************
+
 

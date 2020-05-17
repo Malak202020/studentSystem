@@ -34,8 +34,8 @@ if(isset($_POST['submit'])) {
 
             move_uploaded_file($materialTmpName, $materialDestination);
 
-            $querymaterial="INSERT INTO material(mat_ID, mat_name, mat_teacher, mat_dep, mat_stage)
-            VALUES (NULL,'$materialName','$material_teacher','$material_dep', '$material_stage')";
+            $querymaterial="INSERT INTO material(mat_ID, mat_name, mat_teacher, mat_dep, mat_stage, mat_subject_ID,mat_subject)
+            VALUES (NULL,'$materialName','$material_teacher','$material_dep', '$material_stage','$material_sub', '$material_name')";
 
             mysqli_query($MyDB, $querymaterial);
 
