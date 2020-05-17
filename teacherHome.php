@@ -107,7 +107,7 @@
                 <Tr>
                   <Td><?php echo $material['mat_subject']; ?> </td>
                   <Td> <?php echo $material['mat_name']; ?>
-                    <a href="uploads/material/<?php echo $material['mat_subject'] . $material['mat_stage'] . $material['mat_dep'] . "/" . $material['mat_name']; ?>" class="btn btn-success btn-circle">
+                    <a href="uploads/material/<?php echo $material['mat_subject'] . $material['mat_stage'] . $material['mat_subject_ID'] . "/" . $material['mat_name']; ?>" class="btn btn-success btn-circle">
                       <i class="fas fa-check"></i>
                     </a>
                   </Td>
@@ -160,7 +160,7 @@
             ?>
               <Td> <?php echo $assign['assign_subject']; ?> </td>
               <Td> <?php echo $assign['assign_name']; ?>
-                <a href="uploads/assign/<?php echo $assign['assign_subject'].$assign['assign_stage'].$assign['assign_dep']."/".$assign['assign_name']; ?>" class="btn btn-success btn-circle">
+                <a href="uploads/assign/<?php echo $assign['assign_subject'].$assign['assign_stage'].$assign['assign_subject_ID']."/".$assign['assign_name']; ?>" class="btn btn-success btn-circle">
                   <i class="fas fa-check"></i>
                 </a>
               </Td>
