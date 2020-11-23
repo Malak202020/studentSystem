@@ -219,9 +219,12 @@ legend{
     margin:-14px 18em;
 }
 figure{
-    width:24%;
+    width:30%;
     float:left;
-    height:350px;
+    padding:5px;
+    text-align: center;
+    font-size:24px;
+    font-variant-caps: all-petite-caps;
 }
 figure img{
     width:100%;
