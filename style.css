@@ -1,219 +1,237 @@
-body {
-    color:#C3C3C3;
-    font-family:Corbel,Arial,Helvetica,sans-serif;
-    font-size:16px;
-    background-color:lavender;
-
+*{padding:0; margin:0}
+body{background:#e9eaed; }
+.tab{
+    padding-left:2em;
 }
-
-#wrapper {
-    width:1100px;
-    margin:auto;
-    padding-bottom:20px;
-    background-color:white;
-
-    -moz-border-radius:0;
-    -webkit-border-radius:0;
-    border-radius:0;
-    overflow:hidden;
-
-
-}
-
-#banner {
-
-
-}
-#navigation {
-    height:45px;
-    background:linear-gradient(to top,#c2bcb5,#ffffff);
-
-
-}
-#nav {
-    display:block;
-    list-style:none;
-    text-align:center;
-
-}
-    #nav ul {
-    display:none;
-    list-style:none;
-
-    }
-
-    #nav li {
-    float:left;
-    display:block;
-    text-transform:uppercase;
-    padding:5px 25px 5px 25px;
-    border-left:1px solid white;
-    color:#090e5c;
-    font-weight:bolder;
-    }
-
-    #nav a:link, #nav a:visited {
-
-    display:block;
-    color:#574c3f;
-    text-decoration:none;
-    }
-    #nav a:hover {
-    background-color:white;
-
-    }
-    #content {
-    padding:20px;
-    min-height:200px;
-
- }
-     #ContentPlaceHolder1_pnlProducts div{
-
-    float:left;
-    width:250px;
-    height:250px;
-    text-align:center;
-
-}
-
-   .productImage{
-    width:150px;
-    height:150px;
-    vertical-align:central;
-    padding:10px;
-    border-radius:50px;
-    -moz-border-radius:50px;
-    -webkit-border-radius:50px;
-
-
-}
-
-   .productName{
-
-    font-size:18px;
-    font-weight:bold;
-
-}
-   .productPrice {
-
-    font-family:Arial,helvetica,sans-serif;
-    color:#FFB600;
-
-
-}
-
-.detailsImage {
-
-    width:400px;
-    height:400px;
-     margin-right:20px;
-}
-
-.detailsDescription {
-
-    width:400px;
-    font-style:italic;
-
-}
-
-.detailsPrice {
-
-    font-size:24px;
-    font-weight:bold;
-}
-
-.button {
-
-    padding:10px;
-    margin:10px;
-    color:#ffffff;
-    border:0;
-    border-radius:4px;
-     -moz-border-radius:4px;
-    -webkit-border-radius:4px;
+.clear{
     clear:both;
-    background:linear-gradient(to top,darkgoldenrod,gold);
-    }
-
-
- #btn_add_product{
-
-	border-radius: 8px;
-	width: 10%;
-	height:40px;
-	background-color: #996666;
-
 }
-.About{
-
-	"color: rgb(131, 131, 131);
-	font-family: &quot;Droid Sans&quot;, Arial, Helvetica, &quot;Nimbus Sans L&quot;, sans-serif;
-	font-size: 13px;
-	font-style: normal;
-	font-variant-ligatures: normal;
-	font-variant-caps: normal;
-	font-weight: normal;
-	letter-spacing: normal;
-	orphans: 2;
-	text-align: justify;
-	text-indent: 0px;
-	text-transform: none;
-	white-space: normal;
-	widows: 2;
-	word-spacing: 0px;
-	-webkit-text-stroke-width: 0px;
-	background-color: rgb(255, 255, 255);
-	display: inline !important;
-	float: none;
-
+header, footer{
+    background-color: #141414;
+    color:#ccc;
+    height:200px;
+    width:100%;
+    display: inline-block
 }
- #highlight
-{
+footer{
+    height:300px;
+    padding-top:1em;
+    width:100%;
 
-	font-weight:bolder;
+    
 }
-
-.btnAdd
-{
-
-	border-radius: 8px;
-	width: 100%;
-	height:40px;
-	background-color: #b3ff99;
-	font-weight:bolder;
-
+footer h2{
+    font-family: 'Poiret One', cursive;
+    color:#E43D40
 }
-
-#top{
-
-	background-color:	#6495ED;
-	color:#FFF8DC;
-	border:1px double #FFF8DC;
-	 width:4%;
-	     border-radius: 25px;
-text-align:center;
-margin-left:77%;
-	 height:30px;
-font-weight:bolder;
-opacity: 0.3;
- position:fixed;
-
-
+.main{
+    display: inline-block;
+    width:100%
 }
-
-.cards {
-  FLOAT : LEFT;
-  WIDTH : 170PX;
-  MARGIN : 5PX;
-  border : 1px SOLID black;
+.main-footer p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.2em;
+    text-align: justify;
+    line-height: 1.5em;
 }
-.prods {
-  TEXT-DECORATION  : NONE;
-  FONT-FAMILY : ;
-  COLOR : black;
-  BORDER-RADIUS : 5PX;
+.main-header, .main-footer{
+    width:70%;
+    height:200px;
+    margin: 0 auto;
 }
-
-#blah{
-	color:red;
+.main-header img{
+    margin-left:1em;
+    position: relative;
+}
+.main-header h1{
+    font-family: 'Poiret One', cursive;
+    display: inline-block;
+    font-size: 7em;
+}
+.block{
+    display: inline-block;
+}
+.menu{
+    height:53px;
+    background-color: #E43D40;
+    position: relative;
+    box-shadow: 7px -16px 20px 0px #000;
+}
+.menu ul{
+    list-style: none;
+    text-align: center;
+}
+.menu ul li{
+    display: inline-block;
+}
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Poiret One', cursive;
+    margin: 0.4em 1em;
+    height:30px;
+    display: block;
+}
+.container{
+    background-color: #f1f1f1;
+    border:#ccc 1px solid;
+    border-radius:10px;
+    width:70%;
+    margin:1.5em auto;
+}
+.col-7{
+    width:67%;
+    display: inline-block;
+    padding:5px;
+}
+.col-3{
+    width:30%;
+    /* display: inline-block; */
+    float:right;
+    padding:5px;
+}
+.col-3f{
+    width:33.333333%;
+    /* display: inline-block; */
+    float:right;
+    /* padding:5px; */
+}
+.in-block{
+    padding:10px;
+}
+.in-block h1, .poems li strong{
+    font-family: 'Poiret One', cursive;
+    margin: 10px 0;
+    border-left: 10px solid #E43D40;
+    padding: 0 10px;
+    display: inline-block;
+}
+.poems li strong {
+    font-size:1.6em;
+    font-weight: bold;
+}
+.in-block p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.2em;
+    text-align: justify;
+    line-height: 1.8em;
+}
+.col-10{
+    width:100%;
+    padding:5px;
+    display: inline-block; 
+}
+.in-block li{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 2em;
+}
+.in-block ul{
+    margin-left:4em
+}
+.books{
+    list-style:none;
+}
+.books li{
+    float: left;
+}
+.books li img{
+    width:200px;
+}
+.in-block button{
+    background-color: #E43D40;
+    color:#fff;
+    border:0;
+    padding:0.5em 1em;
+    font-size:1.1em;
+    margin-left:10%
+}
+.poems blockquote{
+    background-color: white;
+    padding:1em;
+    margin:1em;
+}
+.active{
+    border-bottom: 4px #000 solid;
+}
+.form{
+    padding:10px;
+}
+.form fieldset{
+    padding:1em;
+}
+.form input, textarea{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px #E43D40 solid;
+  border-radius: 5px;
+}
+.btn{
+    border:0;
+    background-color: #E43D40;
+    color:#fff;
+    font-size: 1.4em;
+    border-radius:5px;
+}
+.half-input input{
+    width:49.6%;
+    border: 1px #E43D40 solid;
+    border-radius: 5px;
+}
+fieldset{
+    border: 1px #E43D40 solid;
+    border-radius: 5px;
+}
+legend{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #E43D40;
+    color:#fff;
+    padding:0.5em 1em ;
+    border-radius: 5px;;
+}
+.footer-links {
+    list-style: none;
+}
+.footer-links li{
+    padding-bottom: 1em;
+ }
+.footer-links li:before {
+    content:"\00BB";
+    padding-right:1em;
+    color:#E43D40
+}
+.footer-links li a{
+    text-decoration: none;
+    color:#fff;
+    font-family: 'Poiret One', cursive;
+    font-size:1.2em;
+}
+.copyright{
+    width:100%;
+    padding:1.2em 0;
+    background-color: #333 ;
+    color:#fff;
+    margin-top:-10px;
+    font-family:'Poiret One', cursive
+}
+.copyright a{
+    float:right;
+    color:#E43D40;
+    text-decoration: none;
+    margin:-14px 18em;
+}
+figure{
+    width:24%;
+    float:left;
+    height:350px;
+}
+figure img{
+    width:100%;
+    min-width:100px;
+    height:auto;
+}
+.qoiute{
+    position:absolute !important; right:16%; margin-top:10px;
 }

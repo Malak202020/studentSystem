@@ -1,0 +1,119 @@
+@media (max-width: 659px) {
+    .block img {
+        height:100px;
+        margin:unset;
+    }
+    .block h1{
+        font-size:3em;
+
+    }
+    .main-header, .main-footer{
+        margin:unset;
+        height:unset;
+        width:100%
+    }
+    .menu ul li{
+        display:block;
+        border-bottom:1px #b11e21 solid;
+    }
+    .menu{
+        height:unset;
+    }
+    .col-3{
+        width:99%
+    }
+    footer{
+        /* padding:0.5em; */
+        height:auto
+    }
+    .col-3f{
+        float:none;
+        width:90%;
+        padding:1em;
+        }
+        .container{
+            width:90%
+        }
+        .col-7{
+            width:100%
+        }
+        .copyright a{
+            display: none;
+        }
+        .qoiute{
+            display: none;
+        }
+        .in-block ul{
+            margin-left:1em
+        }
+        figure{
+            width:95%
+        }
+        .half-input input{
+            width:100%
+        }
+        .main-footer p{
+            padding: 0 !important;
+        }
+}
+@media (min-width: 660px) and (max-width:1000px){
+    .block img {
+        height:100px;
+        margin:unset;
+    }
+    .block h1{
+        font-size:3em;
+
+    }
+    .main-header, .main-footer{
+        margin:unset;
+        height:unset;
+        width:100%
+    }
+    .menu ul li{
+        display:block;
+        border-bottom:1px #b11e21 solid;
+    }
+    .menu{
+        height:unset;
+    }
+    .col-3{
+        width:99%
+    }
+    footer{
+        /* padding:0.5em; */
+        height:auto
+    }
+    .col-3f{
+        float:none;
+        width:90%;
+        padding:1em;
+        }
+        .container{
+            width:90%
+        }
+        .col-7{
+            width:100%
+        }
+        .copyright a{
+            display: none;
+        }
+        .qoiute{
+            display: none;
+        }
+        .in-block ul{
+            margin-left:1em
+        }
+        figure{
+            width:95%
+        }
+        .half-input input{
+            width:100%
+        }
+        .main-footer p{
+            padding: 0 !important;
+        }
+        .in-block h1, .poems li strong{
+            display: block;
+        }
+}
