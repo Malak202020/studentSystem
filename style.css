@@ -21,9 +21,7 @@ header, footer{
 footer{
     height:300px;
     padding-top:1em;
-    width:100%;
-
-    
+    width:100%;  
 }
 footer h2{
     font-family: 'Poiret One', cursive;
@@ -106,13 +104,7 @@ footer h2{
 .in-block{
     padding:10px;
 }
-.in-block h1, .poems li strong{
-    font-family: 'Poiret One', cursive;
-    margin: 10px 0;
-    border-left: 10px solid #ffd369;
-    padding: 0 10px;
-    display: inline-block;
-}
+
 .poems li strong {
     font-size:1.6em;
     font-weight: bold;
@@ -152,11 +144,7 @@ footer h2{
     font-size:1.1em;
     margin-left:10%
 }
-.poems blockquote{
-    background-color: white;
-    padding:1em;
-    margin:1em;
-}
+
 .active{
     border-bottom: 4px #000 solid;
 }
@@ -220,7 +208,9 @@ legend{
     background-color: #333 ;
     color:#fff;
     margin-top:-10px;
-    font-family:'Poiret One', cursive
+    font-family:'Poiret One', cursive;
+    bottom:0;
+    text-align: center;
 }
 .copyright a{
     float:right;
@@ -237,7 +227,4 @@ figure img{
     width:100%;
     min-width:100px;
     height:auto;
-}
-.qoiute{
-    position:absolute !important; right:16%; margin-top:10px;
 }
