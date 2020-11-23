@@ -3,6 +3,7 @@ body{background:#222831;
 color:#eeeeee }
 .tab{
     padding-left:2em;
+    background-color:#eeeeee
 }
 a{
     color:white;
@@ -144,7 +145,13 @@ footer h2{
     font-size:1.1em;
     margin-left:10%
 }
-
+.in-block a{
+    color: #ffd369;
+}
+.in-block a:hover {
+    color:#fff;
+    transition: 2s;
+}
 .active{
     border-bottom: 4px #000 solid;
 }
